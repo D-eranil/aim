@@ -1,0 +1,73 @@
+﻿@using Aiminfomatics.Helpers
+@addTagHelper *, Kentico.Content.Web.Mvc
+
+@model Kentico.Content.Web.Mvc.Routing.IPageViewModel<CMS.DocumentEngine.Types.Aiminfomatics.HireDeveloper>
+
+@{
+    ViewBag.Title = Model.Page.DocumentName;
+}
+
+@section styles
+    {
+    @* Includes CSS necessary for page builder functionality *@
+    <page-builder-styles />
+}
+    @section scripts
+    {
+    @* Includes scripts necessary for page builder functionality *@
+    <page-builder-scripts />
+}
+    <div class="inr_banr">
+        <div class="container">
+            <div class="banner_ttl">@Model.Page.Services</div>
+            <div class="banner_txt">@Model.Page.Satisfaction</div>
+        </div>
+    </div>
+    <div class="harki">
+        <div class="container">
+            <ul class="hrky">
+                <li><a href="~/Home">Home</a></li>
+                <li><a href="~/Services">> Services</a></li>
+                <li><a href="#"></a>Hire Professional Developers</li>              
+        </ul>
+        </div>
+    </div>
+    <section class="main_con">
+        <div class="container">
+            <div class="row">
+                <div class="span3">
+                    <div class="leftnav">
+                        <ul>
+                            <li><a href="~/mobile-app-development">@Model.Page.MobileApplication</a></li>
+                            <li><a href="~/web-design-development">@Model.Page.WebDesignDev </a></li>
+                            <li><a href="~/seo">@Model.Page.InternetMarketing</a></li>
+                            <li><a href="~/e-commerce">@Model.Page.ECommerceSol</a></li>
+                            <!--<li><a href="web-design-development.html">Security </a></li>-->
+                            <li><a href="~/hire-a-developer" class="active">@Model.Page.HireAdeveloper </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="span6">
+                    @Html.Kentico().ResolveUrls(@Model.Page.HireProfessionalDev)
+                </div>
+                <div class="span3">
+                    <div class="testm">
+                        @Html.Kentico().ResolveUrls(@Model.Page.HireProfessionalsTxt)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="client_sec top_bodr">
+            <div class="container">
+                <ul class="client_logo">
+                    <li><img src="images/client1.jpg" width="144" height="66" alt=""></li>
+                    <li><img src="images/client2.jpg" width="144" height="66" alt=""></li>
+                    <li><img src="images/client3.jpg" width="144" height="66" alt=""></li>
+                    <li><img src="images/client4.jpg" width="144" height="66" alt=""></li>
+                    <li><img src="images/client5.jpg" width="144" height="66" alt=""></li>
+                    <li><img src="images/client6.jpg" width="144" height="66" alt=""></li>
+                    <li><img src="images/client7.jpg" width="144" height="66" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </section>

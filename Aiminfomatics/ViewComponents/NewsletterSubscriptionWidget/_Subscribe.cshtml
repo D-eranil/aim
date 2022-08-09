@@ -1,0 +1,64 @@
+﻿@using Aiminfomatics.Widgets
+
+
+@model NewsletterSubscriptionSubscribeModel
+
+@section styles
+    {
+    <page-builder-styles />
+}
+    @section scripts
+    {
+    <page-builder-scripts />
+}
+
+    <div class="bgimg">
+        <section class="sectionText">
+            <form class="subscribe-form" id="studenteForm" asp-action="Subscribe" asp-controller="NewsletterSubscriptionWidget" asp-antiforgery="true" onsubmit="replaceform(event)">
+                <component-properties-data />
+                <div class="form-group">
+                    <br />
+                    <div class="form-group-label">
+                        <label asp-for="Email"></label>
+                    </div>
+                    <div class="form-group-input">
+                        <input asp-for="Email" style="color:black; border-radius: 0px 0px 0px 0px; border:none; padding:8px 5px;" />
+                    </div><br />
+                    <span style="color:#f50505; background-color:white;font-size: 8px; background-clip: border-box;"
+                      asp-validation-for="Email" class="message message-error" data-valmsg-summary="true"></span>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <div class="form-input-container form-input-container--clickable">
+                            <input asp-for="Remember" />
+                            <label for="Remember">&nbsp;Remember Me?</label>
+                        </div>
+                        <span type="hidden" style="color:#f50505;background-color:white;font-size: 16px; " asp-validation-for="Remember" class="message message-error" data-valmsg-summary="true"></span>
+                    </div>
+                </div>
+                <input id="btnSubscribe" type="submit" value="@HtmlLocalizer["Subscribe"]" class="button" />
+            </form>
+            <div class="clearfix"></div>
+        </section>
+
+    </div>
+
+
+    <script>
+        function replaceform(event) {
+            event.preventDefault();
+            var form = event.target;
+
+            $.ajax({
+
+                method: "POST",
+                url: form.action,
+                data: $(form).serialize(),
+                success: function(data) {
+                    $(form).replaceWith(data);
+                }
+
+            });
+        }
+
+    </script>

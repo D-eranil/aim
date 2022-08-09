@@ -1,0 +1,47 @@
+﻿@using Aiminfomatics.Helpers
+@using Kentico.PageBuilder.Web.Mvc
+
+@model Aiminfomatics.Models.AboutIndexViewModel
+
+@{
+    ViewData["Title"] = HtmlLocalizer["Home"];
+}
+@*@Html.Kentico().ResolveUrls*@
+
+@section styles
+    {
+    @* Includes CSS necessary for page builder functionality *@
+    <page-builder-styles />
+}
+    @section scripts
+    {
+    @* Includes scripts necessary for page builder functionality *@
+    <page-builder-scripts />
+}
+
+@foreach (var aboutSection in Model.AboutSections)
+{
+    <div class="inr_banr">
+      <div class="container">
+        <div class="banner_ttl">@aboutSection.AboutUs</div>
+        <div class="banner_txt">@aboutSection.AboutSatisfaction</div>
+      </div>
+    </div>
+    <div class="harki">
+      <div class="container">
+        <ul class="hrky">
+          <li><a href="~/Home">Home</a></li>
+          <li><a href="~/About">> About Us</a></li>
+        </ul>
+      </div>
+    </div>
+  <section class="main_con">
+    <div class="container">
+      <div class="row">    
+        <div class="span9">
+           @Html.Kentico().ResolveUrls(aboutSection.AboutAimInfomatics)
+        </div>
+      </div>
+    </div>
+  </section>
+}

@@ -1,0 +1,134 @@
+﻿@using Aiminfomatics.Widgets
+@using Kentico.OnlineMarketing.Web.Mvc
+@using Aiminfomatics.Helpers
+@using CMS.Localization
+@using Kentico.Web.Mvc;
+@using Kentico.PageBuilder.Web.Mvc;
+@using Kentico.Content.Web.Mvc;
+@using CMS.DataEngine;
+@using CMS.SiteProvider;
+
+
+
+@{
+    var controllerName = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Aim Infomatics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="IT services, kentico developer, kentico certified developer, website development, software development" />
+    <meta name="description" content="web development company in jaipur" />
+
+    @* Links a stylesheet used by the website. ASP.NET Core automatically searches for static files inside the ~/wwwroot folder. *@
+      <link href="~/css/style.css" rel="stylesheet" type="text/css">
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css">
+  @*  <link href="~/css/bootstrap-responsive.css" rel="stylesheet">*@
+
+   @* 21/07/2022 comment*@
+   @* <link href="~/css/animate.css" rel="stylesheet">
+       <link href="~/css/style.css" rel="stylesheet" type="text/css">
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="~/css/bootstrap-responsive.css" rel="stylesheet">*@
+
+    <link rel='stylesheet' id='rs-settings-css' href='~/content/plugins/revslider/rs-plugin/css/settings.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-captions-css' href='~/content/plugins/revslider/rs-plugin/css/captions.css' type='text/css' media='all' />
+
+    @* Razor section for additional page-specific styles *@
+    @RenderSection("styles", required: false)
+    <page-builder-styles />
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>*@
+
+    <script type='text/javascript' src='includes/js/jquery/jquery.js?ver=1.8.3'></script>
+    <script type='text/javascript' src='content/plugins/revslider/rs-plugin/js/jquery.themepunch.plugins.min.js?ver=3.5.1'></script>
+    <script type='text/javascript' src='content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?ver=3.5.1'></script>
+
+
+</head>
+<body>
+    <div class="wraper">
+
+        <header>
+            <div class="top_hdr">
+                <div class="container">
+                    <div class="tpcon pdtop10">Telephone: +91-95096-75779</div>
+                    <ul class="tplink">
+                        <li><a href="~/Home">Home</a></li>
+                        <li><a href="~/Contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hedr_bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="span2">
+                            <div class="logo"><a href="~/Home" title="Aim Infomatics"><img src="images/logo.png" alt="Aim Infomatics" onclick="ga('send', 'event', { eventCategory: 'button', eventAction: 'Click', eventLabel: 'logo click'});"></a></div>
+                        </div>
+                        <div class="span10">
+                            <div class="main_nav">
+                                <div class="menubar">
+                                    <div class="navbar navbar-inverse nav_absult">
+                                        <div class="navbar-inner">
+                                            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+                                            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                            <a class="brand" href="#">Menu</a>
+                                            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+                                            <div class="nav-collapse collapse">
+                                                <div class="navigation">
+                                                    @* Renders the view component with the navigation menu, including the <nav> element *@
+                                                    @await Component.InvokeAsync("NavigationMenu")
+                                                </div>
+                                            </div><!--/.nav-collapse -->
+                                        </div><!-- /.navbar-inner -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--block content -->
+            <!--Services content -->
+        </header>
+
+        @RenderBody()
+
+
+        <footer class="futr">
+            @await Component.InvokeAsync("Footer")
+        </footer>
+
+    </div>
+
+    <script src="~/content/plugins/revslider/rs-plugin/js/jquery.themepunch.plugins.min.js?ver=3.5.1"></script>
+    <script src="~/content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?ver=3.5.1"></script>
+
+    @* 21/07/2022 comment*@
+  @*  <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+      <script src="~/js/jquery.1.8.2.min.js"></script>
+      <script src="~/jquery.onecarousel.min.js"></script>
+      <script src="~/js/bootstrap.min.js"></script>
+  *@
+   @* 21/07/2022 comment*@
+
+    @*  <script src="~/js/jquery.js"></script>*@
+
+    @*<script src="~/Scripts/jquery/jquery.js"></script>*@
+    <script src="~/Scripts/jquery-validate/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+    
+    
+    
+    <script src="~/js/bootstrap.js"></script>
+
+    <page-builder-scripts />
+    @RenderSection("scripts", required: false)
+</body>
+</html>

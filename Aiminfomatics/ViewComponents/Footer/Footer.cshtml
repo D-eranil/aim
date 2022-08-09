@@ -1,0 +1,76 @@
+﻿@using Aiminfomatics.Helpers
+@using Aiminfomatics.Widgets
+@using Kentico.PageBuilder.Web.Mvc
+
+@model Aiminfomatics.ViewComponents.FooterItemModel
+
+@{
+    ViewData["Title"] = HtmlLocalizer["Footer"];
+}
+@*@Html.Kentico().ResolveUrls*@
+
+@section styles
+    {
+    @* Includes CSS necessary for page builder functionality *@
+    <page-builder-styles />
+}
+    @section scripts
+    {
+    @* Includes scripts necessary for page builder functionality *@
+    <page-builder-scripts />
+}
+
+
+    <div class="container">
+        <div class="row futr_gap">
+            @*<ul>*@
+                <div class="span4">
+                    <h2 class="futr_ttl">Navigations</h2>
+                    <ul class="futrlink">
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Website Packages</a></li>
+                        <li><a href="#"> Web</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Seo</a></li>
+                        <li><a href="#">Contacts </a></li>
+                        <li><a href="#">Company Profile </a></li>
+                        <li><a href="#">E-commerce Solutions</a></li>
+                        <li><a href="#">App Development</a></li>
+                        <li><a href="#">Solution</a></li>
+                        <li><a href="#">Responsive Design</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="span4">
+                    <h2 class="futr_ttl">Get in <span>touch</span></h2>
+                    <ul class="get_add">
+                         <li><span><img src="images/iconmail.png" alt=""></span>@Model.EmailTxt: <a target="_blank" rel="noopener noreferrer" href="@Model.EmailUrl">@Model.EmailIdTxt</a></li>
+                        <li><span><img src="images/iconmob.png" alt=""></span>@Model.PhoneTxt: @Model.PhoneNo</li>
+                       <li class="clr" style="color:white; -webkit-user-modify: read-write-plaintext-only;"><span><img src="images/icon_loc.png" alt=""></span>@Html.Raw(Model.Address)</li>
+                        
+                        <div class="clr"></div>
+                         <li id="foot-li"></li>
+                    </ul>
+                    <h2 class="futr_ttl pdtop25">@Model.Social <span>@Model.Media</span></h2>
+                    <ul class="social">
+                        <li><a target="_blank" rel="noopener noreferrer" href="@Model.TwitterUrl"><img src="@Model.TwitterUrl" alt=""></a></li>
+                        <li> <a target="_blank" rel="noopener noreferrer" href="@Model.FacbookUrl"><img src="@Model.FacbookImg" alt=""></a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="@Model.BribbbleUrl"><img src="@Model.BribbbleImg" alt=""></a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="@Model.GoogleUrl"><img src="@Model.GoogleImg" alt=""></a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="@Model.InstagramUrl"><img src="@Model.InstagramImg" alt=""></a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="@Model.EmailUrl"><img src="@Model.EmailImg" alt=""></a></li>
+                    </ul>
+                    <div class="clr"></div>
+                </div>
+
+               @* <div class="span4">  
+                        @await Html.Kentico().RenderStandaloneWidgetAsync(NewsletterSubscriptionViewComponent.IDENTIFIER, new NewsletterSubscriptionProperties())   
+                        <img src="images/ft_logo.png" alt="" class="pdtop20 fut_logo">
+					<p class="coprt_txt pdtop10">Copyright &copy; 2013 Aim Infomatics.<br>All rights reserved</p>
+                    <div class="clr"></div>
+                </div>*@
+         @*   </ul>*@
+        </div>
+    </div>
+    

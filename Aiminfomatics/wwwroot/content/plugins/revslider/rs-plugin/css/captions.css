@@ -1,0 +1,239 @@
+@font-face {
+	font-family: 'Myriad Pro Regular';
+	src: url('../fonts/MyriadPro-Regular.eot');
+	src: local('☺'), url('../fonts/MyriadPro-Regular.woff') format('woff'), 
+	url('../fonts/MyriadPro-Regular.ttf') format('truetype'), 
+	url('../fonts/MyriadPro-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face { 
+	font-family: 'Myriad Pro Light'; 
+	src: url('../fonts/myriadpro-light.eot'); 
+	src: url('../fonts/myriadpro-light.eot') format('embedded-opentype'), 
+	url('../fonts/myriadpro-light.woff') format('woff'), 
+	url('../fonts/myriadpro-light.ttf') format('truetype'), 
+	url('../fonts/myriadpro-light.svg#MyriadProLight') format('svg'); }
+@font-face {
+	font-family: 'Myriad Pro Semibold';
+	src: url('../fonts/MyriadPro-Semibold.eot');
+	src: local('☺'), url('../fonts/MyriadPro-Semibold.woff') format('woff'), 
+	url('../fonts/MyriadPro-Semibold.ttf') format('truetype'), 
+	url('../fonts/MyriadPro-Semibold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.tp-caption { font-family:Myriad Pro Regular, "Trebuchet MS", Arial, Helvetica, sans-serif  }
+
+.tp-caption.transparent {
+						position:absolute; 
+						color: #fff; 
+						text-shadow: none !important; 
+						font-weight:300; 
+						font-size:36px; 
+						line-height: 36px; 
+						padding: 6px 10px; 
+						margin: 0px; 
+						border-width: 0px; 
+						border-style: none; 
+}
+.tp-caption.big_white{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 36px; 
+			line-height: 36px; 
+			font-family: Arial; 
+			padding: 0px 4px; 
+			padding-top: 1px;
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			background-color:#000;	
+			letter-spacing: -1.5px;										
+		}
+
+.tp-caption.big_orange{
+			position: absolute; 
+			color: #ff7302; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 36px; 
+			line-height: 36px; 
+			font-family: Arial; 
+			padding: 0px 4px; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			background-color:#fff;	
+			letter-spacing: -1.5px;															
+		}	
+					
+.tp-caption.big_black{
+			position: absolute; 
+			color: #000; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 36px; 
+			line-height: 36px; 
+			font-family: Arial; 
+			padding: 0px 4px; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			background-color:#fff;	
+			letter-spacing: -1.5px;															
+		}	
+
+.tp-caption.big_black_2 {
+			position: absolute; 
+			color: #000; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 25px; 
+			line-height: 36px; 
+			font-family: Arial; 
+			padding: 0px 4px; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 	
+			letter-spacing: -1.5px;															
+		}	
+
+.tp-caption.medium_grey{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 20px; 
+			line-height: 20px; 
+			font-family: Arial; 
+			padding: 2px 4px; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			background-color:#888;		
+			white-space:nowrap;	
+			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);		
+		}	
+					
+.tp-caption.small_text{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 14px; 
+			line-height: 20px; 
+			font-family: Arial; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			white-space:nowrap;	
+			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);		
+		}
+					
+.tp-caption.medium_text{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 20px; 
+			line-height: 20px; 
+			font-family: Arial; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			white-space:nowrap;	
+			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);		
+		}
+					
+.tp-caption.large_text{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 40px; 
+			line-height: 40px; 
+			font-family: Arial; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			white-space:nowrap;	
+			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);		
+		}	
+					
+.tp-caption.very_large_text{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 60px; 
+			line-height: 60px; 
+			font-family: Arial; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			white-space:nowrap;	
+			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+			letter-spacing: -2px;		
+		}
+					
+.tp-caption.very_big_white{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 60px; 
+			line-height: 60px; 
+			font-family: Arial; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			white-space:nowrap;	
+			padding: 0px 4px; 
+			padding-top: 1px;
+			background-color:#000;		
+					}	
+					
+.tp-caption.very_big_black{
+			color: #000; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 60px; 
+			line-height: 60px; 
+			font-family: Arial; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			white-space:nowrap;	
+			padding: 0px 4px; 
+			padding-top: 1px;
+			background-color:#fff;		
+					}
+					
+.tp-caption.boxshadow{
+		-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+		-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	}
+											
+.tp-caption.black{
+		color: #fff; 
+		text-shadow: none;	
+		font-size:14px;
+		line-height: 1.5;
+	}	
+					
+.tp-caption.noshadow {
+		text-shadow: none;		
+	}	
+					
+.tp-caption a { text-shadow: none;	-webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -ms-transition: all 0.2s ease-out; text-decoration:none ; text-transform:uppercase }			
+.tp-caption a:hover { text-decoration:none ; text-transform:uppercase }
+
+
+.read-more {font-weight:bold; FONT-SIZE:14px; color:#ffffff; font-family:Myriad Pro Regular, "Trebuchet MS", Arial, Helvetica, sans-serif; BACKGROUND-COLOR:#f87e11; border:1px solid #cb660c; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; box-shadow:inset 1px 1px #ffa758; -moz-box-shadow:inset 1px 1px 5px #ffa758; -webkit-box-shadow:inset 1px 1px #ffa758; cursor:pointer; padding:10px 20px}
+
+.read-more:hover 
+{font-weight:bold; FONT-SIZE:14px; color:#ffffff; font-family:Myriad Pro Regular, "Trebuchet MS", Arial, Helvetica, sans-serif; BACKGROUND-COLOR:#444444; border:1px solid #000000; height:40px; -moz-border-radius:6px; -webkit-border-radius:6px; box-shadow:inset 1px 1px #5C5B5B; -moz-box-shadow:inset 1px 1px 5px #5C5B5B; -webkit-box-shadow:inset 1px 1px #5C5B5B; cursor:pointer}

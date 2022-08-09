@@ -1,0 +1,60 @@
+﻿@using Aiminfomatics.Helpers
+@addTagHelper *, Kentico.Content.Web.Mvc
+@model Kentico.Content.Web.Mvc.Routing.IPageViewModel<CMS.DocumentEngine.Types.Aiminfomatics.ContactUs>
+@{
+    ViewBag.Title = Model.Page.DocumentName;
+}
+@section styles
+    {
+    @* Includes CSS necessary for page builder functionality *@
+    <page-builder-styles />
+}
+    @section scripts
+    {
+    @* Includes scripts necessary for page builder functionality *@
+    <page-builder-scripts />
+}
+    <div class="inr_banr">
+        <div class="container">
+            <div class="banner_ttl">@Model.Page.ContactName</div>
+            <div class="banner_txt">@Model.Page.Satification</div>
+        </div>
+    </div>
+    <div class="harki">
+        <div class="container">
+            <ul class="hrky">
+                <li><a href="~/Home">Home</a></li>
+                <li><a href="~/ContactUs">> Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="main_con">
+        <div class="container">
+            <div class="row">
+                <div class="span8">
+                    <div class="inner-page">
+                        <h1 class="intitle">Contact us </h1>
+                        <p>Feel Free to ask us anything . . .</p>
+                        <div class="wpcf7" id="wpcf7-f198-p199-o1">
+                           <editable-area area-identifier="ContactUs" area-options-allowed-widgets="new[] { SystemComponentIdentifiers.FORM_WIDGET_IDENTIFIER }" />
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class="span4">
+                    <h2 class="rtitle">@Model.Page.HeadOffice</h2>
+                    <h2 class="rtitle1"> @Model.Page.AimInfomatics </h2>
+                    <p class="rtext"></p>
+                      @Html.Kentico().ResolveUrls(@Model.Page.IndiaTxt)
+                        @Html.Kentico().ResolveUrls(@Model.Page.USATxt)<br />                 
+                    <span>@Model.Page.MailText: <a target="_blank" rel="noopener noreferrer" href="@Model.Page.SalesMailId">@Model.Page.MailClickText</a></span><br />
+                   
+                    <span>@Model.Page.WebsiteUrlClick: <a target="_blank" rel="noopener noreferrer" href="@Model.Page.WebsiteUrl">@Model.Page.WebsiteTxt</a></span>                                         
+                    @*<iframe width="300" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?ie=UTF8&amp;q=aiminfomatics&amp;fb=1&amp;gl=in&amp;hq=&amp;hnear=&amp;ll=26.952598,75.726711&amp;spn=0.006295,0.006295&amp;t=m&amp;iwloc=A&amp;output=embed"></iframe>
+                *@
+                </div>
+            </div>
+        </div>
+    </section>
+
+

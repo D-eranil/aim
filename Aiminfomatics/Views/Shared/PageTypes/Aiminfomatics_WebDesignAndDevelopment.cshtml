@@ -1,0 +1,51 @@
+﻿@using Aiminfomatics.Helpers
+@addTagHelper *, Kentico.Content.Web.Mvc
+@model Kentico.Content.Web.Mvc.Routing.IPageViewModel<CMS.DocumentEngine.Types.Aiminfomatics.WebDesignAndDevelopment>
+@{
+    ViewBag.Title = Model.Page.DocumentName;
+}
+@section styles
+    {
+    @* Includes CSS necessary for page builder functionality *@
+    <page-builder-styles />
+}
+    @section scripts
+    {
+    @* Includes scripts necessary for page builder functionality *@
+    <page-builder-scripts />
+}
+<div class="inr_banr" style="background:url(images/web-design.jpg) no-repeat; width:100%; height:150px;"> </div>
+<div class="harki">
+    <div class="container">
+        <ul class="hrky">
+            <li><a href="~/Home">Home</a></li>
+            <li><a href="~/Services">> Services</a></li>
+            <li><a href="#">> Web Design &amp; Development</a></li>
+        </ul>
+    </div>
+</div>
+<section class="main_con">
+    <div class="container">
+        <div class="row">
+            <div class="span3">
+                <div class="leftnav">
+                    <ul>
+                        <li><a href="~/mobile-app-development">@Model.Page.MobileApplication</a></li>
+                        <li><a href="~/web-design-development" class="active">@Model.Page.WebDesignDeve </a></li>
+                        <li><a href="~/seo">@Model.Page.InternetMarketing </a></li>
+                        <li><a href="~/e-commerce">@Model.Page.ECommerceSolutions</a></li>                     
+                        <li><a href="~/hire-a-developerl">@Model.Page.HireDeveloper </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span6">
+                @Html.Kentico().ResolveUrls(@Model.Page.WebDesignDeve)
+            </div>
+            <div class="span3">
+                <div class="testm">
+                   @Html.Kentico().ResolveUrls(@Model.Page.WeWork)
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,30 @@
+﻿@using Aiminfomatics.Models
+@model IEnumerable<MenuItemViewModel>
+
+<nav>
+    <div class="nav-collapse collapse">
+        <div class="navigation">
+            <ul>
+                @foreach (MenuItemViewModel menuItem in Model)
+                {
+                    @* Iterates through the view model collection and renders HTML links for the menu items *@
+                   <li> <a href="@menuItem.MenuItemRelativeUrl" title="@menuItem.MenuItemText">@menuItem.MenuItemText</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+	<script type="text/javascript">
+		const menuItem = document.querySelectorAll('a');
+
+		menuItem.forEach(item => {
+			if (item.href === location.href) {
+				item.classList.add('active')
+				
+				return;
+			}		
+		})		
+	</script>

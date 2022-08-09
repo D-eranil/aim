@@ -1,0 +1,29 @@
+﻿
+@*<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css" />*@
+    @* Razor section for additional page-specific styles *@
+   
+
+
+@section styles
+{
+    @* Includes CSS necessary for page builder functionality *@
+    <page-builder-styles />
+}
+@section scripts
+{
+    @* Includes scripts necessary for page builder functionality *@
+    <page-builder-scripts />
+}
+
+<form class="subscribe-form authenticated" asp-action="SubscribeAuthenticated" asp-controller="NewsletterSubscriptionWidget" asp-antiforgery="true" onsubmit="replaceForm(event)">
+    <component-properties-data />
+
+    <p>@HtmlLocalizer["Want to stay up to date? Please leave us your email address."]</p>
+
+    <input type="submit" value="@HtmlLocalizer["Subscribe"]" class="btn btn-primary" />
+</form>
+

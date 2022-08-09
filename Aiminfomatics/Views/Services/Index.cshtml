@@ -1,0 +1,125 @@
+﻿@using Aiminfomatics.Helpers
+@using Kentico.PageBuilder.Web.Mvc
+
+@model Aiminfomatics.Models.ServicesIndexViewModel
+
+@{
+    ViewData["Title"] = HtmlLocalizer["Home"];
+}
+@*@Html.Kentico().ResolveUrls*@
+
+@section styles
+    {
+    @* Includes CSS necessary for page builder functionality *@
+    <page-builder-styles />
+}
+    @section scripts
+    {
+    @* Includes scripts necessary for page builder functionality *@
+    <page-builder-scripts />
+}
+
+    @foreach (var services in Model.ServicesSections)
+{
+    <div class="inr_banr">
+        <div class="container">
+            <div class="banner_ttl">@services.Services</div>
+            <div class="banner_txt">@services.ServicesSatisfaction</div>
+        </div>
+    </div>
+    <div class="harki">
+        <div class="container">
+            <ul class="hrky">
+                <li><a href="~/Home">Home</a></li>
+                <li><a href="~/Services">> Services</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="main_con">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="inner_hding"> Our <span>Services</span> </div>
+                    <div class="inr_text">
+                        @Html.Kentico().ResolveUrls(services.OurServices)
+
+                        @{
+
+                        
+                        var url = services.RelatedButtonUrl;
+                        var EcomUrl = services.ECommerceRelatedPage;
+                        var HireUrl = services.HireDeveloperRelatedPage;
+                        var SeoUrl = services.SeoRelatedPage;
+                        var WebDesUrl = services.WebDesAndDeveRelatedPage;
+                        var WebSoftUrl = services.WebSoftRelatedPage;
+
+
+                        //if (!string.IsNullOrEmpty(url) && (!string.IsNullOrEmpty(text)))
+                        //{
+                        //<div class="row">
+                        //    <div class="clear center-text">
+                        //        <a href="@url" class="btn btn-more">
+                        //            @text
+                        //        </a>
+                        //    </div>
+                        //</div>
+                        //}
+                        <div class="row block-1">
+
+                            <div class="span4 maxheight">
+                                <div>
+                                    <img src="@services.MobileApplicationImg" alt="">
+                                    <h3>@services.MobileApplication</h3>
+                                    <a href="@url" class="btn1">click ECO here</a>
+                                </div>
+                            </div>
+
+                            <div class="span4">
+                                <div>
+                                    <img src="@services.WebDesignImg" alt="">
+                                    <h3>@services.WebDesignDevelopment</h3>
+                                    <a href="@WebDesUrl" class="btn1">click here</a>
+                                </div>
+                            </div>
+                            <div class="span4 maxheight">
+                                <div>
+                                    <img src="@services.SeoImg" alt="">
+                                    <h3>@services.InternetMarketin</h3>
+                                    <a href="@SeoUrl" class="btn1">click here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row block-1">
+                            <div class="span4">
+                                <div>
+                                    <img src="@services.EcomImg" alt="">
+                                    <h3>@services.ECommerceSolutions</h3>
+                                    <a href="@EcomUrl" class="btn1">click here</a>
+                                </div>
+                            </div>
+                            <div class="span4 maxheight">
+                                <div>
+                                    <img src="@services.SoftwareImg" alt="">
+                                    <h3>@services.SoftwareDevelopment</h3>
+                                    <a href="@WebSoftUrl" class="btn1">click here</a>
+                                </div>
+                            </div>
+                            <div class="span4 maxheight">
+                                <div>
+                                    <img src="@services.HireImg" alt="">
+                                    <h3>@services.HireDeveloper</h3>
+                                    <a href="@HireUrl" class="btn1">click here</a>
+                                </div>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+}
+
+
